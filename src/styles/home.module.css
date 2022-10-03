@@ -1,0 +1,45 @@
+.hero {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -100;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+    bottom: 0;
+}
+
+.info p {
+    font-size: 1.25rem;
+}
+
+
+.accent {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: flex;
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-right: 100px;
+    width: 150px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    opacity: .95;
+    transform: scale(.95);
+}

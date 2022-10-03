@@ -1,0 +1,23 @@
+.info {
+    text-align: center;
+}
+
+.container {
+    background-image: url("../images/digivice.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.back {
+    margin-left: 50px;
+    font-weight: 500;
+}
