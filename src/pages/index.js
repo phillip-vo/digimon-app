@@ -8,8 +8,8 @@ export default function Home({ data }) {
   const heroImage = data.file.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
-      <div className={styles.hero}></div>
+    <Layout page="home">
+      <GatsbyImage className={styles.hero} image={heroImage} alt="hero image" />
       <section className={styles.info}>
         <p>
           A simple application to fetch Digimons from an API by{" "}
