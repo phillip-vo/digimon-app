@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import * as styles from "../styles/navbar.module.css"
 
 export default function Navbar({ page }) {
   return (
@@ -14,13 +15,19 @@ export default function Navbar({ page }) {
         className="logo"
       />
       <div className="links">
-        <Link className={page === "home" ? "light" : "dark"} to="/">
+        <Link className={page === "home" ? styles.light : styles.dark} to="/">
           Home
         </Link>
-        <Link className={page === "home" ? "light" : "dark"} to="/about">
+        <Link
+          className={page === "home" ? styles.light : styles.dark}
+          to="/about"
+        >
           About
         </Link>
-        <Link className={page === "home" ? "light" : "dark"} to="/digimons">
+        <Link
+          className={page === "home" ? styles.light : styles.dark}
+          to="/digimons"
+        >
           Digimons
         </Link>
       </div>
