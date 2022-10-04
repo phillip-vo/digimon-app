@@ -3,14 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
 export default function Navbar({ page }) {
-  const styles = {
-    fontWhite: page === "home" ? { color: "#F5F5F5" } : { color: "#2C2D3C" },
-    borderBottomWhite:
-      page === "home"
-        ? { borderBottom: "3px solid #F5F5F5" }
-        : { borderBottom: "3px solid #2C2D3C" },
-  }
-
   return (
     <nav>
       <StaticImage
@@ -22,13 +14,13 @@ export default function Navbar({ page }) {
         className="logo"
       />
       <div className="links">
-        <Link style={styles.fontWhite} activeClassName="active" to="/">
+        <Link className={page === "home" ? "light" : "dark"} to="/">
           Home
         </Link>
-        <Link style={styles.fontWhite} activeClassName="active" to="/about">
+        <Link className={page === "home" ? "light" : "dark"} to="/about">
           About
         </Link>
-        <Link style={styles.fontWhite} activeClassName="active" to="/digimons">
+        <Link className={page === "home" ? "light" : "dark"} to="/digimons">
           Digimons
         </Link>
       </div>

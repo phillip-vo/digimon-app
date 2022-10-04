@@ -45,6 +45,13 @@ nav a {
     font-weight: 500;
     font-size: 1.5rem;
     border-bottom: 3px solid transparent;
+}
+
+.light {
+    color: var(--light-color);
+}
+
+.dark {
     color: var(--dark-color);
 }
 
