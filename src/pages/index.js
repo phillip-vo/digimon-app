@@ -8,7 +8,7 @@ export default function Home({ data }) {
   const heroImage = data.file.childImageSharp.gatsbyImageData
 
   return (
-    <Layout>
+    <Layout page="home">
       <GatsbyImage className={styles.hero} image={heroImage} alt="hero image" />
       <section className={styles.info}>
         <p>

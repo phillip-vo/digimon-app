@@ -2,7 +2,15 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-export default function Navbar() {
+export default function Navbar({ page }) {
+  const styles = {
+    fontWhite: page === "home" ? { color: "#F5F5F5" } : { color: "#2C2D3C" },
+    borderBottomWhite:
+      page === "home"
+        ? { borderBottom: "3px solid #F5F5F5" }
+        : { borderBottom: "3px solid #2C2D3C" },
+  }
+
   return (
     <nav>
       <StaticImage
@@ -14,13 +22,13 @@ export default function Navbar() {
         className="logo"
       />
       <div className="links">
-        <Link activeClassName="active" to="/">
+        <Link style={styles.fontWhite} activeClassName="active" to="/">
           Home
         </Link>
-        <Link activeClassName="active" to="/about">
+        <Link style={styles.fontWhite} activeClassName="active" to="/about">
           About
         </Link>
-        <Link activeClassName="active" to="/digimons">
+        <Link style={styles.fontWhite} activeClassName="active" to="/digimons">
           Digimons
         </Link>
       </div>

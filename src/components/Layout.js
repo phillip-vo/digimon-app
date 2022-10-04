@@ -7,13 +7,13 @@ export const HomePageContext = createContext({
   setIsHomePage: () => {},
 })
 
-export default function Layout({ children }) {
+export default function Layout({ children, page }) {
   const [isHomePage, setIsHomePage] = useState(false)
 
   return (
     <HomePageContext.Provider value={{ isHomePage, setIsHomePage }}>
       <div className="layout">
-        <Navbar />
+        <Navbar page={page} />
         <div className="content">{children}</div>
       </div>
     </HomePageContext.Provider>
