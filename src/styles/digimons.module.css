@@ -6,6 +6,11 @@
     grid-gap: 80px;
 }
 
+.link_container {
+    display: flex;
+    justify-content: center;
+}
+
 .search_wrapper {
     display: flex;
     flex-direction: column;
