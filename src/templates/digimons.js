@@ -62,7 +62,10 @@ export default function Digimons({ pageContext: { allDigimon } }) {
             return null
           })
           .map(digimon => (
-            <Link to={`/digimons/${digimon.name}`}>
+            <Link
+              className={styles.link_container}
+              to={`/digimons/${digimon.name}`}
+            >
               <Card
                 img={digimon.img}
                 name={digimon.name}
