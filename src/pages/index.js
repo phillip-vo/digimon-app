@@ -9,7 +9,7 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage className={styles.hero} image={heroImage} alt="hero image" />
+      <div className={styles.hero}></div>
       <section className={styles.info}>
         <p>
           A simple application to fetch Digimons from an API by{" "}

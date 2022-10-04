@@ -1,9 +1,13 @@
 .hero {
+    background-image: url('../images/digimon-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
-    z-index: -100;
+    z-index: -10;
 }
 
 .info {
