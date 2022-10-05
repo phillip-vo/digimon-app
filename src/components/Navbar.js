@@ -1,6 +1,11 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import styled from "styled-components"
+
+const NavLink = styled(Link)`
+  color: ${({ page }) => (page ? "#F5F5F5" : "#2C2D3C")};
+`
 
 export default function Navbar({ page }) {
   return (
@@ -14,15 +19,15 @@ export default function Navbar({ page }) {
         className="logo"
       />
       <div className="links">
-        <Link className={page === "home" ? "light" : "dark"} to="/">
+        <NavLink page={page} to="/">
           Home
-        </Link>
-        <Link className={page === "home" ? "light" : "dark"} to="/about">
+        </NavLink>
+        <NavLink page={page} to="/about">
           About
-        </Link>
-        <Link className={page === "home" ? "light" : "dark"} to="/digimons">
+        </NavLink>
+        <NavLink page={page} to="/digimons">
           Digimons
-        </Link>
+        </NavLink>
       </div>
     </nav>
   )
